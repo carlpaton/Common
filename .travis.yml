@@ -1,0 +1,6 @@
+language: csharp
+solution: Common.sln
+
+matrix:
+  include:
+    - dotnet: 2.2
