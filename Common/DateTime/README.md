@@ -2,9 +2,9 @@
 
 [Back](../../../../)
 
-### IElapsedTimeService
+**Interface**: `IElapsedTimeService`
 
-* UnixEpoch
+### UnixEpoch
 
 The `epoch` serves as a reference point from which time is measured.
 
@@ -14,7 +14,7 @@ The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of s
 double UnixEpoch(System.DateTime dateTimeNow);
 ```
 
-* YearOneEpoch
+### YearOneEpoch
 
 The `epoch` serves as a reference point from which time is measured.
 
