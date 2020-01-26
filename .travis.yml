@@ -1,8 +1,6 @@
 language: csharp
-solution: Common.sln
-install:
-  - nuget restore Common.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+mono: none
+dotnet: 2.2.104
 script:
-  - msbuild /p:Configuration=Release Common.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./CommonUnitTest/bin/Release/netcoreapp2.2/CommonUnitTest.dll
+ - dotnet restore
+ - dotnet test
