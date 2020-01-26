@@ -2,8 +2,8 @@
 Common services and magic.
 
 * [DateTime](Common/DateTime)
-* [Encoding](Encoding/README.md)
-* [Http](Http/README.md)
-  * [Authorization](Http/Authorization/README.md)
-* [Serialization](Serialization/README.md)
+* [Encoding](Common/Encoding)
+* [Http](Common/Http)
+  * [Authorization](Common/Http/Authorization)
+* [Serialization](Common/Serialization)
 

@@ -1,4 +1,7 @@
 # Authorization
+
+[Back](../../../../../)
+
 HTTP header Authorization.
 
 ### Basic Auth
