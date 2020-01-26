@@ -1,10 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>CarlPaton.Common</PackageId>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Authors>Carl Paton</Authors>
-    <Company>n/a</Company>
+    <Company>carlpaton.github.io</Company>
     <Description>Common services and magic.</Description>
+	<Version>1.0.0</Version>
+	<PackageTags>c#</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

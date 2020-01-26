@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/carlpaton/Common.svg?branch=master)](https://travis-ci.com/carlpaton/Common)
+[![NuGet version (CarlPaton.Common)](https://img.shields.io/nuget/v/CarlPaton.Common.svg?style=flat-square)](https://www.nuget.org/packages/CarlPaton.Common/) [![Build Status](https://travis-ci.com/carlpaton/Common.svg?branch=master)](https://travis-ci.com/carlpaton/Common)
 
 # Common
 
