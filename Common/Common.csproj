@@ -6,8 +6,11 @@
     <Authors>Carl Paton</Authors>
     <Company>carlpaton.github.io</Company>
     <Description>Common services and magic.</Description>
-	<Version>1.0.0</Version>
+	<Version>1.0.1</Version>
 	<PackageTags>c#</PackageTags>
+	<PackageLicenseUrl>https://github.com/carlpaton/Common/blob/master/LICENSE.md</PackageLicenseUrl>
+	<RepositoryUrl>https://github.com/carlpaton/Common</RepositoryUrl>
+	<RepositoryType>Github</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
