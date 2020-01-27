@@ -10,10 +10,10 @@ namespace Common.Http.Authorization.Interface
         /// Parameters come from `Configuration.GetSection("X").Value` in the consumers `Startup.cs`
         /// If null or empty reads `Environment.GetEnvironmentVariable("X")`
         /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="usernameBasic"></param>
+        /// <param name="passwordBasic"></param>
         /// <returns></returns>
-        BasicAuthModel GetBasicAuthModel(string username,  string password);
+        BasicAuthModel GetBasicAuthModel(string usernameBasic,  string passwordBasic);
 
         /// <summary>
         /// 

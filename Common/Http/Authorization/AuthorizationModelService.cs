@@ -8,16 +8,21 @@ namespace Common.Http.Authorization
 {
     public class AuthorizationModelService : IAuthorizationModelService
     {
-        public BasicAuthModel GetBasicAuthModel(string username, string password)
+        public BasicAuthModel GetBasicAuthModel(string usernameBasic, string passwordBasic)
         {
-            var _username = !string.IsNullOrEmpty(username) ? username : Environment.GetEnvironmentVariable("USERNAME");
-            var _password = !string.IsNullOrEmpty(password) ? password : Environment.GetEnvironmentVariable("PASSWORD");
+            var username = !string.IsNullOrEmpty(usernameBasic) ? usernameBasic : Environment.GetEnvironmentVariable("USERNAME_BASIC");
+            var password = !string.IsNullOrEmpty(passwordBasic) ? passwordBasic : Environment.GetEnvironmentVariable("PASSWORD_BASIC");
 
-            return new BasicAuthModel() 
+            var basicAuthModel = new BasicAuthModel() 
             { 
-                Password = _password,
-                Username = _username
+                Password = password,
+                Username = username
             };
+
+            if (basicAuthModel.IsNullOrEmpty())
+                throw new Exception("BasicAuthModel IsNullOrEmpty, check keys in appsettings.json or provide keys in environment variables.");
+
+            return basicAuthModel;
         }
 
         public OAuthModel GetOAuthModel(OAuthAppsettingsModel oAuthAppsettingsModel, System.DateTime dateTimeNow, IElapsedTimeService elapsedTimeService, IEncodingService encodingService)
@@ -34,7 +39,7 @@ namespace Common.Http.Authorization
             var nonce = encodingService
                 .ToBase64String(timeStamp);
 
-            return new OAuthModel() 
+            var oAuthModel = new OAuthModel() 
             { 
                 ConsumerKey = consumerKey,
                 ConsumerSecret = consumerSecret,
@@ -43,6 +48,11 @@ namespace Common.Http.Authorization
                 TimeStamp = timeStamp,
                 Nonce = nonce
             };
+
+            if (oAuthModel.IsNullOrEmpty())
+                throw new Exception("OAuthModel IsNullOrEmpty, check keys in appsettings.json or provide keys in environment variables.");
+
+            return oAuthModel;
         }
     }
 }

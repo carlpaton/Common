@@ -41,6 +41,7 @@
                 || string.IsNullOrEmpty(TokenSecret)
                 || string.IsNullOrEmpty(SignatureMethod)
                 || string.IsNullOrEmpty(TimeStamp)
+                || TimeStamp == "0"
                 || string.IsNullOrEmpty(Nonce);
         }
     }

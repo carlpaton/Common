@@ -13,7 +13,7 @@ Parameters come from `Configuration.GetSection("X").Value` in the consumers `Sta
 If null or empty reads `Environment.GetEnvironmentVariable("X")`
 
 ```c#
-BasicAuthModel GetBasicAuthModel(string username,  string password);
+BasicAuthModel GetBasicAuthModel(string usernameBasic,  string passwordBasic);
 ```
 
 ### GetOAuthModel
