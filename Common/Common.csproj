@@ -5,12 +5,13 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Authors>Carl Paton</Authors>
     <Company>carlpaton.github.io</Company>
-    <Description>Common services and magic.</Description>
-	<Version>1.0.1</Version>
-	<PackageTags>c#</PackageTags>
+    <Description>Common DateTime, Encoding, Http &amp; Authorization and Serialization services for applications written in .Net Core, SDK 2.2.104</Description>
+	<Version>1.0.2</Version>
+	<PackageTags>C# Encoding, Http, Authorization, Serialization</PackageTags>
 	<PackageLicenseUrl>https://github.com/carlpaton/Common/blob/master/LICENSE.md</PackageLicenseUrl>
 	<RepositoryUrl>https://github.com/carlpaton/Common</RepositoryUrl>
 	<RepositoryType>Github</RepositoryType>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +20,12 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Features">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.features\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 
 # Common
 
-Common services and magic for applications written in .Net Core, SDK 2.2.104
+Common DateTime, Encoding, Http & Authorization and Serialization services for applications written in .Net Core, SDK 2.2.104
 
 * [DateTime](Common/DateTime)
 * [Encoding](Common/Encoding)

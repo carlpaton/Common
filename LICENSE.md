@@ -1,8 +1,6 @@
-# MIT License
+MIT License
 
-[Back](https://github.com/carlpaton/Common/)
-
-Copyright (c) 2020 [Carl Paton](https://carlpaton.github.io/)
+Copyright (c) 2020 Carl Paton
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
