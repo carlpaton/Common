@@ -42,3 +42,15 @@ Deserializes the JSON to the specified .NET type.
 T ToObject<T>(string responseString);
 ```
 
+### XmlFileToObject
+
+Newtonsoft.Json.JsonConvert
+
+This was useful when converting XML files (packages.config, [x].csproj) to object
+
+* postedFile: IFormFile used in .net core 2x MVC project
+
+```c#
+T XmlFileToObject<T>(IFormFile postedFile);
+```
+

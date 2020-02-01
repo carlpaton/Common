@@ -1,4 +1,6 @@
-﻿namespace Common.Serialization.Interface
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Common.Serialization.Interface
 {
     public interface IJsonConvertService
     {
@@ -20,5 +22,17 @@
         /// <param name="responseString"></param>
         /// <returns></returns>
         T ToObject<T>(string responseString);
+
+        /// <summary>
+        /// Newtonsoft.Json.JsonConvert
+        /// 
+        /// This was useful when converting XML files (packages.config, [x].csproj) to object
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="postedFile">
+        /// IFormFile used in .net core 2x MVC project
+        /// </param>
+        /// <returns></returns>
+        T XmlFileToObject<T>(IFormFile postedFile);
     }
 }
