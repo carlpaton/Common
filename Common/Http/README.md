@@ -2,27 +2,31 @@
 
 [Back](../../../../)
 
-**Interface**: `IHttpService`
+**Interface**: `IHttpWebRequestFactory`
 
-### Get
+### Create
 
 ```c#
-T Get<T>(string endPoint);
+IHttpWebRequest Create(string uri);
 ```
 
-### Post
-
-`payLoad` parameter is serialized with `JsonConvert`
+Example use
 
 ```c#
-T Post<T>(string endPoint, object payLoad);
-```
+var request = _httpWebRequestFactory.Create(endPoint);
+request.Method = WebRequestMethods.Http.Get;
+request.ContentType = HttpConstants.JsonContentType;
 
-### Post
+// Optional headers
+// Use `HttpHeaderService` and `AuthorizationModelService` to create `httpHeaderModel`
+HttpHeaderModel httpHeaderModel;
+request.SetHeader(httpHeaderModel)
 
-`serializedPayLoad` parameter needs to be serialized with `DataContractJsonSerializer`
-
-```c#
-T Post<T>(string endPoint, string serializedPayLoad);
+using (var response = request.GetResponse())
+{
+    using (var streamReader = new StreamReader(response.GetResponseStream()))
+    {
+        var responseString = streamReader.ReadToEnd();
+		...
 ```
 
