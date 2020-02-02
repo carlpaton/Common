@@ -2,11 +2,13 @@
 using Common.Http.Authorization.Model;
 using Common.Http.Interface;
 using Common.Serialization.Interface;
+using System;
 using System.IO;
 using System.Net;
 
 namespace Common.Http
 {
+    [Obsolete(message: "Please use `HttpWebRequestFactory`")]
     public class HttpService : IHttpService
     {
         private readonly string _contentType = "application/json; charset=utf-8";
