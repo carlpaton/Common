@@ -6,7 +6,7 @@
     <Authors>Carl Paton</Authors>
     <Company>carlpaton.github.io</Company>
     <Description>Common DateTime, Encoding, Http &amp; Authorization and Serialization services for applications written in .Net Core, SDK 2.2.104</Description>
-	<Version>1.0.2</Version>
+	<Version>1.0.3</Version>
 	<PackageTags>C# Encoding, Http, Authorization, Serialization</PackageTags>
 	<PackageLicenseUrl>https://github.com/carlpaton/Common/blob/master/LICENSE.md</PackageLicenseUrl>
 	<RepositoryUrl>https://github.com/carlpaton/Common</RepositoryUrl>
