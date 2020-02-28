@@ -8,6 +8,7 @@ Common DateTime, Encoding, Http & Authorization and Serialization services for a
 * [Encoding](Common/Encoding)
 * [Http](Common/Http)
   * [Authorization](Common/Http/Authorization)
+* [IpAddress](Common/IpAddress)
 * [Serialization](Common/Serialization)
 
 ## License
